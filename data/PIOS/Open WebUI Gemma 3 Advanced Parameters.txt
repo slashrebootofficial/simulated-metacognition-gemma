@@ -1,0 +1,7 @@
+Temperature 1.1
+max_tokens 10240
+top_k 0
+top_p 0.95
+min_p 0.03
+repeat_penalty 1.2
+num_ctx 90000

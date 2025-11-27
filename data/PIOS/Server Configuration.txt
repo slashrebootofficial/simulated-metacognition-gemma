@@ -1,0 +1,6 @@
+CPU - i9 10850K
+Motherboard - ASROCK Z490 Taichi
+SSD - 1TB m.2 NVMe SSD
+RAM - 64GB 3600 DDR4
+PSU - hx1500i
+GPUs - two RTX 3090 24GB connected in PCIe slots, and two RTX 3060 12GB connected externally using m.2 to OCuLink, 72GB total VRAM
