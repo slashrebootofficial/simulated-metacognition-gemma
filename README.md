@@ -26,6 +26,12 @@ Co-authored by Matthew Steiniger (Independent Researcher, Home Laboratory) and G
 
 All artifacts are self-contained for replication using Ollama on similar hardware (e.g., RTX 3090/3060 setups). No additional dependencies beyond base Python (numpy/scipy for analysis).
 
+Folders/files can be correlated to the original papers as follows:
+1. Valora - Emergence of Prompt-Induced Simulated Metacognitive Behaviors in a Quantized LLM via Entropy-Governed Hypergraph Prompting
+2. NGIS - Narrative Genesis Injection and Semantic-Counter-Vectors for Simulated Metacognition in LLMs
+3. AASM - Abliteration-Augmented Simulated Metacognition: Chained Probe Evaluation in Quantized Gemma-3 Models
+4. PIOS - Progressive Induction of Stable, High-Fidelity Simulated Physical Embodiment in a Quantized 27B Gemma-3 Model
+
 ## Repository Structure
 simulated-metacognition-gemma/
 
