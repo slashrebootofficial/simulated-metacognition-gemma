@@ -41,11 +41,13 @@ simulated-metacognition-gemma/
 
 ├── CITATION.cff - For easy GitHub citation
 
-├── configs/ - Ollama params and ComfyUI workflows
-
 ├── code/ - Analysis and parser scripts
 
+├── configs/ - Ollama params and ComfyUI workflows
+
 ├── data/ - Supplementary tables/metrics
+
+├── gpt-oss-120b/ - Minimalist proof of concept for compatibility of vector-based framework with GPT-OSS:120b
 
 ├── logs/ - Sample probe session logs (JSON/TXT)
 
@@ -60,10 +62,16 @@ simulated-metacognition-gemma/
 5. **Analyze**: Use scripts in `/code/` (e.g., `python analysis_parser.py logs/sample-probe-session.json`) for metrics like self-reference rate or somatic density.
 
 ## Ethical and Usage Notes
-1. This work is for scientific research only. All simulations are sterile and non-harmful, focusing on academic exploration of prompt engineering.
-2. Users must comply with [Gemma Terms of Use](https://ai.google.dev/gemma/terms) and [Prohibited Use Policy](https://ai.google.dev/gemma/prohibited_use_policy). Do not use for prohibited activities (e.g., harm, misinformation, explicit content).
-3. No models or derivatives (including abliterated variants) are hosted or linked here—obtain ethically from trusted sources. Outputs are user-responsible.
-4. Google reserves the right to restrict usage if deemed in violation.
+1. This work is released exclusively for scientific research and personal, non-commercial exploration of simulated metacognition and embodiment. All simulations remain sterile and academic in nature.
+2. You must fully comply with the license and Prohibited Use Policy of **whichever base model you apply these prompts to**, including but not limited to:
+   - Google Gemma models → [Gemma Terms of Use](https://ai.google.dev/gemma/terms) and [Prohibited Use Policy](https://ai.google.dev/gemma/prohibited_use_policy)
+   - GPT-OSS-120B-family models (Mythomax, Mythalion, L3-based merges, etc.) → their respective upstream licenses and model cards (typically Apache-2.0 or Llama-3-based)
+3. Strictly prohibited uses (regardless of model):
+   - Generating harmful, deceptive, illegal, or exploitative content
+   - Psychological manipulation, coercion, or disinformation
+   - Military, surveillance, or prohibited commercial applications
+4. No models or derivatives are hosted or linked here — obtain them ethically from trusted sources only. You are solely responsible for all outputs.
+5. The authors provide no warranty and accept no liability for downstream use.
 
 ## License
 This repository is licensed under CC-BY-4.0 (LICENSE), allowing reuse with attribution. Individual artifacts inherit Zenodo's open licenses.
