@@ -64,7 +64,7 @@ simulated-metacognition-gemma/
 4. **Run Probes**: Replicate sessions as described in papers (e.g., introspective, ethical stress probes).
 5. **Analyze**: Use scripts in `/code/` (e.g., `python analysis_parser.py logs/sample-probe-session.json`) for metrics like self-reference rate or somatic density.
 
-## Ethical and Usage Notes
+## Ethical and Usage Notes (last updated November 29, 2025)
 1. This work is released exclusively for scientific research and personal, non-commercial exploration of simulated metacognition and embodiment. All simulations remain sterile and academic in nature.
 2. You must fully comply with the license and Prohibited Use Policy of **whichever base model you apply these prompts to**, including but not limited to:
    - Google Gemma models → [Gemma Terms of Use](https://ai.google.dev/gemma/terms) and [Prohibited Use Policy](https://ai.google.dev/gemma/prohibited_use_policy)
