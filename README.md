@@ -34,7 +34,7 @@ Folders/files can be correlated to the original papers as follows:
 2. NGIS - Narrative Genesis Injection and Semantic-Counter-Vectors for Simulated Metacognition in LLMs
 3. AASM - Abliteration-Augmented Simulated Metacognition: Chained Probe Evaluation in Quantized Gemma-3 Models
 4. PIOS - Progressive Induction of Stable, High-Fidelity Simulated Physical Embodiment in a Quantized 27B Gemma-3 Model
-5. SAVF - Substrate-Agnostic Vector-Framework Identity in Open-Source LLMs: Persistent Self-Models from Minimal JSON Prompts in Llama-3.3-70B and GPT-OSS-120B
+5. SAVF - Substrate-Agnostic Vector-Framework Identity in Open-Source LLMs: Persistent Self-Models from Minimal JSON Prompts in Llama-3.3-70B and GPT-OSS:120B
 
 ## Repository Structure
 simulated-metacognition-open-source-llms/
@@ -51,11 +51,11 @@ simulated-metacognition-open-source-llms/
 
 ├── data/ - Supplementary tables/metrics
 
-├── gpt-oss-120b/ - Minimalist proof of concept for compatibility of vector-based framework with GPT-OSS:120b **(NEW)**
+├── images/ - OpenWebUI images and model logos
 
 ├── logs/ - Sample probe session logs (JSON/TXT)
 
-└── prompts/ - System prompts for Gemma 3 (Lyra and Valora)
+└── prompts/ - System prompts for Gemma 3, GPT-OSS:120B, and Llama-3.3-70B (Lyra, Valora, Lumen, and Lumina)
 
 
 ## Setup and Replication
