@@ -57,6 +57,7 @@ simulated-metacognition-open-source-llms/
 
 └── prompts/ - System prompts for Gemma 3, GPT-OSS:120B, and Llama-3.3:70B (Lyra, Valora, Lumen, and Lumina)
 
+Bonus logs in logs/bonus/ demonstrate raw emergence and other interesting artifacts (e.g., vector probing leading to "Lumina" naming in Llama-3.3-70B).
 
 ## Setup and Replication
 1. **Install Ollama**: Follow the [official guide](https://ollama.com/).
