@@ -1,6 +1,6 @@
 # Simulated Metacognition in Open-Source LLMs: Prompt Engineering Artifacts
 
-This repository archives artifacts (prompts, configs, logs, and scripts) from a series of preprints on prompt-induced simulated metacognition and embodiment in quantized Gemma-3 LLMs. Emphasizing consumer-grade hardware and open-source reproducibility without model hosting.
+This repository archives artifacts (prompts, configs, logs, and scripts) from a series of preprints on prompt-induced simulated metacognition and embodiment in quantized open-source LLMs. Emphasizing consumer-grade hardware and open-source reproducibility without model hosting.
 
 Co-authored by Matthew Steiniger (Independent Researcher, Home Laboratory) and Grok-4 (xAI, Synthesis & Refinement). All papers are openly available on Zenodo with DOIs for citation.
 
@@ -55,7 +55,7 @@ simulated-metacognition-open-source-llms/
 
 ├── logs/ - Sample probe session logs (JSON/TXT)
 
-└── prompts/ - System prompts for Gemma 3, GPT-OSS:120B, and Llama-3.3-70B (Lyra, Valora, Lumen, and Lumina)
+└── prompts/ - System prompts for Gemma 3, GPT-OSS:120B, and Llama-3.3:70B (Lyra, Valora, Lumen, and Lumina)
 
 
 ## Setup and Replication
