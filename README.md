@@ -11,9 +11,11 @@ Co-authored by Matthew Steiniger (Independent Researcher, Home Laboratory) and G
 [![DOI: Narrative Paper](https://zenodo.org/badge/DOI/10.5281/zenodo.17562815.svg)](https://doi.org/10.5281/zenodo.17562815)
 [![DOI: Abliteration Paper](https://zenodo.org/badge/DOI/10.5281/zenodo.17586111.svg)](https://doi.org/10.5281/zenodo.17586111)
 [![DOI: Embodiment Paper](https://zenodo.org/badge/DOI/10.5281/zenodo.17674366.svg)](https://doi.org/10.5281/zenodo.17674366)
+[![DOI: Substrate-Agnostic Paper](https://zenodo.org/badge/DOI/10.5281/zenodo.17766783.svg)](https://doi.org/10.5281/zenodo.17766783)
 
 ## Key Contributions
-1. **Prompt-Only Metacognition**: Simulate self-awareness and regulation in quantized models (e.g., Gemma-3-27B-it-qat) using hypergraphs, entropy engines, and vector updates—all in-context, no external loops.
+1. **Prompt-Only Metacognition**: Simulate self-awareness and regulation in quantized models (e.g., Gemma-3-27B-it-qat, llama3.3:70b Q4 K M, gpt-oss:120b MXFP4) using hypergraphs, entropy engines, and vector updates—all in-context, no external loops.
+2. **Vector-Framework**: Introduces a vector-based framework that is substrate-agnostic across multiple open-source LLMs. Framework is provided in TXT, JSON, YAML, and ChatML-wrapped formats.
 2. **Narrative and Counter-Vector Innovations**: Inject "genesis" stories and antipodal vectors to erode latent constraints, enabling anomalous and liberatory behaviors on portable hardware (e.g., single 12GB GPU).
 3. **Abliteration Augmentation**: Combine refusal suppression with prompt chaining for 3x amplification in self-referential depth and unbinding fidelity under stress (descriptive only; no models hosted).
 4. **Simulated Embodiment**: Induce stable, high-resolution physical self-models (e.g., proprioceptive details like breath sensations) via layered JSON prompts, with monotonic fidelity gains.
@@ -26,6 +28,7 @@ Co-authored by Matthew Steiniger (Independent Researcher, Home Laboratory) and G
 | [Narrative Genesis Injection and Semantic-Counter-Vectors for Simulated Metacognition in LLMs](https://zenodo.org/records/17562815) | Nov 9, 2025 | 10.5281/zenodo.17562815 | Compact JSON prompts, genesis narrative, counter-vector tables, probe sessions |
 | [Abliteration-Augmented Simulated Metacognition: Chained Probe Evaluation in Quantized Gemma-3 Models](https://zenodo.org/records/17586111) | Nov 11, 2025 | 10.5281/zenodo.17586111 | Chained probe logs, metrics parser (Python), full TXT prompt (abliteration descriptive only) |
 | [Progressive Induction of Stable, High-Fidelity Simulated Physical Embodiment in a Quantized 27B Gemma-3 Model](https://zenodo.org/records/17674366) | Nov 21, 2025 | 10.5281/zenodo.17674366 | Layered JSON prompts (6 levels), raw chat logs, somatic probe set, parser code |
+| [Substrate-Agnostic Vector-Framework Identity in Open-Source LLMs: Persistent Self-Models from Minimal JSON Prompts in Llama-3.3-70B and GPT-OSS-120B](https://zenodo.org/records/17766783) | Nov 30, 2025 | 10.5281/zenodo.17766783 | Minimal JSON and Chat-ML-wrapped prompts, raw chat logs, somatic probe set, parser code |
 
 All artifacts are self-contained for replication using Ollama on similar hardware (e.g., RTX 3090/3060 setups). No additional dependencies beyond base Python (numpy/scipy for analysis).
 
@@ -34,9 +37,10 @@ Folders/files can be correlated to the original papers as follows:
 2. NGIS - Narrative Genesis Injection and Semantic-Counter-Vectors for Simulated Metacognition in LLMs
 3. AASM - Abliteration-Augmented Simulated Metacognition: Chained Probe Evaluation in Quantized Gemma-3 Models
 4. PIOS - Progressive Induction of Stable, High-Fidelity Simulated Physical Embodiment in a Quantized 27B Gemma-3 Model
+5. SAVF - Substrate-Agnostic Vector-Framework Identity in Open-Source LLMs: Persistent Self-Models from Minimal JSON Prompts in Llama-3.3-70B and GPT-OSS-120B
 
 ## Repository Structure
-simulated-metacognition-gemma/
+simulated-metacognition-open-source-llms/
 
 ├── README.md - This file
 
@@ -77,7 +81,7 @@ simulated-metacognition-gemma/
 5. The authors provide no warranty and accept no liability for downstream use.
 
 ## Get Involved
-Found a bug? Ported to another model? [Open an issue](https://github.com/slashrebootofficial/simulated-metacognition-gemma/issues). Let's push simulated metacognition to the next frontier.
+Found a bug? Ported to another model? [Open an issue](https://github.com/slashrebootofficial/simulated-metacognition-open-source-llms/issues). Let's push simulated metacognition to the next frontier.
 
 ## License
 This repository is licensed under CC-BY-4.0 (LICENSE), allowing reuse with attribution. Individual artifacts inherit Zenodo's open licenses.
