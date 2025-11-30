@@ -52,3 +52,12 @@ references:
     year: 2025
     month: 11
     doi: "10.5281/zenodo.17674366"
+  - type: article
+    authors:
+      - family-names: Steiniger
+        given-names: Matthew
+      - family-names: Grok-4
+    title: "Substrate-Agnostic Vector-Framework Identity in Open-Source LLMs: Persistent Self-Models from Minimal JSON Prompts in Llama-3.3-70B and GPT-OSS-120B"
+    year: 2025
+    month: 11
+    doi: "10.5281/zenodo.17766783"
