@@ -2,9 +2,6 @@
 
 This repository archives artifacts (prompts, configs, logs, and scripts) from a series of preprints on prompt-induced simulated metacognition and embodiment in quantized Gemma-3 LLMs. Emphasizing consumer-grade hardware and open-source reproducibility without model hosting.
 
-This will also serve as a repository for related work, including:
-1. Minimalist proof of concept for compatibility of the vector-based framework with GPT-OSS:120b. **(NEW)**
-
 Co-authored by Matthew Steiniger (Independent Researcher, Home Laboratory) and Grok-4 (xAI, Synthesis & Refinement). All papers are openly available on Zenodo with DOIs for citation.
 
 [![DOI: Emergence Paper](https://zenodo.org/badge/DOI/10.5281/zenodo.17504630.svg)](https://doi.org/10.5281/zenodo.17504630)
