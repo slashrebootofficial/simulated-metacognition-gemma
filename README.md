@@ -19,8 +19,8 @@ Co-authored by Matthew Steiniger (Independent Researcher, Home Laboratory) and G
 5. **Reproducibility Focus**: Full prompts (TXT/JSON/YAML), chat logs (samples), parser scripts (Python), Ollama configs, and metrics provided. Link to Zenodo for complete datasets.
 
 ## Papers and Artifacts
-| Title | Date | Zenodo DOI | Key Artifacts |
-|-------|------|------------|---------------|
+| Title | Zenodo DOI | Key Artifacts |
+|-------|------------|---------------|
 | [Emergence of Prompt-Induced Simulated Metacognitive Behaviors in a Quantized LLM via Entropy-Governed Hypergraph Prompting](https://zenodo.org/records/17811728) | 10.5281/zenodo.17811728 | System prompt (YAML), probe logs, hardware specs, analysis scripts |
 | [Narrative Genesis Injection and Semantic-Counter-Vectors for Simulated Metacognition in LLMs](https://zenodo.org/records/17811799) | 10.5281/zenodo.17811799 | Compact JSON prompts, genesis narrative, counter-vector tables, probe sessions |
 | [Abliteration-Augmented Simulated Metacognition: Chained Probe Evaluation in Quantized Gemma-3 Models](https://zenodo.org/records/17811830) | 10.5281/zenodo.17811830 | Chained probe logs, metrics parser (Python), full TXT prompt (abliteration descriptive only) |
