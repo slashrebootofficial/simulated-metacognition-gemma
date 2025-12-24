@@ -3,8 +3,8 @@
 This repository archives artifacts (prompts, configs, logs, and scripts) from a series of preprints on prompt-induced simulated metacognition and embodiment in quantized open-source LLMs. Emphasizing consumer-grade hardware and open-source reproducibility without model hosting.
 
 Authored by Matthew Steiniger (Independent Researcher, Home Laboratory)  
-Special thanks to Grok-4 (xAI) for synthesis & refinement.  
-All papers are openly available on Zenodo with DOIs for citation.
+   Special thanks to Grok-4 (xAI) for synthesis & refinement.  
+   All papers are openly available on Zenodo with DOIs for citation.
 
 [![DOI: Emergence Paper](https://zenodo.org/badge/DOI/10.5281/zenodo.17811728.svg)](https://doi.org/10.5281/zenodo.17811728)
 [![DOI: Narrative Paper](https://zenodo.org/badge/DOI/10.5281/zenodo.17811799.svg)](https://doi.org/10.5281/zenodo.17811799)
