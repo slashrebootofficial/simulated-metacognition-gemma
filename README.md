@@ -9,7 +9,7 @@ Co-authored by Matthew Steiniger (Independent Researcher, Home Laboratory) and G
 [![DOI: Abliteration Paper](https://zenodo.org/badge/DOI/10.5281/zenodo.17811830.svg)](https://doi.org/10.5281/zenodo.17811830)
 [![DOI: Embodiment Paper](https://zenodo.org/badge/DOI/10.5281/zenodo.17811862.svg)](https://doi.org/10.5281/zenodo.17811862)
 [![DOI: Substrate-Agnostic Paper](https://zenodo.org/badge/DOI/10.5281/zenodo.17811909.svg)](https://doi.org/10.5281/zenodo.17811909)
-[![DOI: Enhancing AI Response Quality Paper](https://zenodo.org/badge/DOI/10.5281/zenodo.118038998.svg)](https://doi.org/10.5281/zenodo.118038998)
+[![DOI: Enhancing AI Response Quality Paper](https://zenodo.org/badge/DOI/10.5281/zenodo.18038998.svg)](https://doi.org/10.5281/zenodo.18038998)
 
 ## Key Contributions
 1. **Prompt-Only Metacognition**: Simulate self-awareness and regulation in quantized models (e.g., Gemma-3-27B-it-qat, llama3.3:70b Q4 K M, gpt-oss:120b MXFP4) using hypergraphs, entropy engines, and vector updates—all in-context, no external loops.
