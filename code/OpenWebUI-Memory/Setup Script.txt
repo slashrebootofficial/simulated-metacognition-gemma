@@ -1,0 +1,103 @@
+```bash
+#!/bin/bash
+# Stop and remove containers
+sudo docker stop open-webui chromadb
+sudo docker rm open-webui chromadb
+
+# Clean ChromaDB data (optional, comment out to preserve data)
+# sudo rm -rf /mnt/spcc2/*
+# sudo rm -rf /mnt/spcc2/.Trash-1000
+sudo mkdir -p /mnt/spcc2
+sudo chown -R 1000:1000 /mnt/spcc2
+sudo chmod -R 777 /mnt/spcc2
+
+# Recreate Docker network
+sudo docker network rm openwebui-network
+sudo docker network create openwebui-network
+
+# Start ChromaDB
+sudo docker run -d --name chromadb \
+  -v /mnt/spcc2:/chroma/chroma \
+  --network openwebui-network \
+  -p 8000:8000 \
+  -e CHROMA_SERVER_PERSIST_DIRECTORY=/chroma/chroma \
+  -e IS_PERSISTENT=TRUE \
+  chromadb/chroma:0.6.3
+
+# Verify ChromaDB
+curl http://192.168.0.115:8000/api/v2/heartbeat
+ls -la /mnt/spcc2
+
+# Start Open WebUI
+sudo docker run -d -p 3000:8080 \
+  -e OLLAMA_BASE_URL=http://192.168.0.115:11434 \
+  -e VECTOR_DB=chroma \
+  -e CHROMA_HTTP_HOST=chromadb \
+  -e CHROMA_HTTP_PORT=8000 \
+  -e RAG_EMBEDDING_ENGINE=ollama \
+  -e RAG_EMBEDDING_MODEL=all-minilm \
+  -e RAG_TOP_K_RERANKER=0 \
+  -e RAG_RERANKING_MODEL=none \
+  -e RAG_TEMPLATE="Context:\n{{CONTEXT}}\n\nUser Query:\n{{QUERY}}\n\nPlease answer the user's query using the information provided in the context. If the answer is not in the context, say 'I don't have that information in my memory.'" \
+  -e CHUNK_SIZE=500 \
+  -e CHUNK_OVERLAP=50 \
+  -e SRC_LOG_LEVELS="{'MAIN': 'DEBUG'}" \
+  --gpus all \
+  -v open-webui:/app/backend/data \
+  --network openwebui-network \
+  --name open-webui \
+  --restart always \
+  ghcr.io/open-webui/open-webui:main
+
+# Copy main.py
+sudo docker cp main.py open-webui:/app/backend/open_webui/main.py
+
+# Install dependencies
+sudo docker exec -it open-webui pip uninstall -y chromadb sentence-transformers
+sudo docker exec -it open-webui pip install chromadb==0.6.3 sentence-transformers
+
+# Create and copy check_chroma.py
+cat << EOF > check_chroma.py
+import chromadb
+client = chromadb.HttpClient(host="chromadb", port=8000)
+try:
+    collection = client.get_collection(name="chat_memories")
+    print(f"Collection count: {collection.count()}")
+except Exception as e:
+    print(f"Error: {e}")
+EOF
+sudo docker cp check_chroma.py open-webui:/app/backend/check_chroma.py
+
+# Create and copy test_chroma.py
+cat << EOF > test_chroma.py
+import chromadb
+from sentence_transformers import SentenceTransformer
+import logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+client = chromadb.HttpClient(host="chromadb", port=8000)
+logger.info("Connected to ChromaDB at chromadb:8000")
+try:
+    collection = client.get_or_create_collection(name="chat_memories")
+    logger.info(f"Collection created, count: {collection.count()}")
+    model = SentenceTransformer('all-MiniLM-L6-v2')
+    embedding = model.encode(["Test query"], convert_to_tensor=False).tolist()[0]
+    collection.add(
+        documents=["Test query"],
+        metadatas=[{"response": "Test response", "timestamp": 1234567890}],
+        ids=["test_id_1"],
+        embeddings=[embedding]
+    )
+    logger.info("Added test entry")
+    logger.info(f"Persisted, count: {collection.count()}")
+except Exception as e:
+    logger.error(f"Error: {e}")
+EOF
+sudo docker cp test_chroma.py open-webui:/app/backend/test_chroma.py
+
+# Run check_chroma.py
+sudo docker exec -it open-webui python3 /app/backend/check_chroma.py
+
+# Restart Open WebUI
+sudo docker restart open-webui

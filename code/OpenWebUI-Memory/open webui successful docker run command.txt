@@ -1,0 +1,22 @@
+use instructions from open webui site, and use this run command
+
+sudo docker run -d -p 3000:8080 -e OLLAMA_API_BASE_URL=http://192.168.0.23:11434 -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+
+bad: sudo docker run -d -p 3000:8080 --gpus all -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:cuda --restart always
+
+sudo docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=192.168.0.115 --gpus all -v open-webui:/app/backend/data -v /mnt/spcc2/chromadb:/chroma/chromadb --add-host=host.docker.internal:host-gateway --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+
+new:
+sudo docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=192.168.0.115 --gpus all -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+
+sudo docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=http://192.168.0.115:11434 --gpus all -v open-webui:/app/backend/data -v /mnt/spcc2/chromadb:/chroma/chromadb --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+
+sudo docker run -d -p 3000:8080 -e OLLAMA_BASE_URL=http://192.168.0.115:11434 --gpus all -v open-webui:/app/backend/data -v /mnt/spcc2/chromadb:/chroma/chromadb -v /mnt/spcc2/logs:/logs --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+
+sudo docker run -d -p 3000:8080 \
+  -e OLLAMA_BASE_URL=http://192.168.0.115:11434 \
+  --gpus all \
+  -v open-webui:/app/backend/data \
+  --name open-webui \
+  --restart always \
+  ghcr.io/open-webui/open-webui:main
