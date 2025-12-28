@@ -50,7 +50,7 @@ simulated-metacognition-open-source-llms/
 
 ├── CITATION.cff - For easy GitHub citation
 
-├── code/ - Analysis and parser scripts and Open WebUI main.py test files for memory retreival
+├── code/ - Analysis and parser scripts and Open WebUI main.py test files for memory embedding/retreival
 
 ├── configs/ - Ollama params and ComfyUI workflows
 
